@@ -1,0 +1,68 @@
+#include<iostream>
+#include<conio.h>
+#include<math.h>
+
+using namespace std;
+
+int main()
+{
+	char a;
+	double x,y;
+	int menu;
+	
+	code:
+	cout << "\n\nMENU\n" <<	"Add      [1]\n" << "Subtract [2]\n" << "Multiply [3]\n" << "Divide   [4]\n" << "Modulus  [5]\n" << endl;
+	cout << "Enter your choice(1-5): ";
+	cin >> menu;
+	cout << "Enter your two numbers: \n\n";
+	cout << "1st Value: ";
+	cin >> x;
+	cout << "\n" << "2nd Value: ";
+	cin >> y;
+	cout << "\n";
+	
+	
+	switch(menu)
+	{
+		case 1:
+			cout << "Sum: " << x + y;
+			cout << endl;
+			break;
+		case 2:
+			cout << "Difference: " << x - y;
+			cout << endl;
+			break;
+		case 3:
+			cout << "Product: " << x * y;
+			cout << endl;
+			break;
+		case 4:
+			cout << "Quotient : " << x / y;
+			cout << endl;
+			break;
+		case 5:
+			cout << "Absolute Value: " << fabs(x) << " " << fabs(y);
+			cout << endl;
+			break;
+		default:
+			cout << "You must enter a value between 1-5";
+			cout << endl;
+			break;
+	}
+	
+	cout << "Continue? Press 'y' if yes or 'n' if no: ";
+	cin >> a;
+	
+	if(a=='y' || a=='Y')
+	{
+		goto code;
+	}
+	if(a=='n' || a=='N')
+	{
+		cout << "Thank you!";
+			
+		return 0;
+	}
+	_getch();
+	return 0;
+}
